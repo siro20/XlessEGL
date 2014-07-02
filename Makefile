@@ -4,9 +4,10 @@ LIBDIR =
 LIB = -lEGL -lGL -ldrm -lgbm
 LDFLAGS = $(LIBDIR) $(LIB)
 
-all: eglkms 
+all: eglkms egltexkms
 
 eglkms: eglkms.c
 	$(CC) $(CFLAGS) $(INC) $(LDFLAGS) -o $@ $<
 
-
+egltexkms: egltexkms.c
+	$(CC) $(CFLAGS) $(INC) $(LDFLAGS) -o $@ $<
