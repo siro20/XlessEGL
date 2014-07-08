@@ -4,10 +4,13 @@ LIBDIR =
 LIB = -lEGL -lGL -ldrm -lgbm
 LDFLAGS = $(LIBDIR) $(LIB)
 
-all: eglkms egltexkms
+all: eglkms egltexkms eglbench
 
 eglkms: eglkms.c
 	$(CC) $(CFLAGS) $(INC) $(LDFLAGS) -o $@ $<
 
 egltexkms: egltexkms.c
+	$(CC) $(CFLAGS) $(INC) $(LDFLAGS) -o $@ $<
+
+eglbench: eglbench.c
 	$(CC) $(CFLAGS) $(INC) $(LDFLAGS) -o $@ $<

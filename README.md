@@ -20,3 +20,8 @@ Example 2: egltexkms
 ========
 
 A bouncing textured box.
+
+Example 3: eglbench
+========
+
+Benchmark for glDrawPixels, glTexSubImage2D, GL_ARB_pixel_buffer_object drawing to screen
